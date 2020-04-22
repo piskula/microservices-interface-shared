@@ -1,19 +1,23 @@
 package sk.momosi.servicesinterfaces
 
 import org.springframework.http.ResponseEntity
-import org.springframework.web.bind.annotation.*
+import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PostMapping
+import org.springframework.web.bind.annotation.RequestBody
+import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.RequestParam
 import sk.momosi.dto.data.SensorDTO
 import sk.momosi.dto.data.SensorValueCreateDTO
 import sk.momosi.dto.data.SensorValueDTO
 import sk.momosi.services.Constants.DATA_SERVER
-import sk.momosi.services.Constants.PRODUCES_MEDIA_TYPE
+import sk.momosi.services.Constants.MEDIA_JSON
 import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.OffsetDateTime
 import java.time.ZonedDateTime
 import javax.validation.Valid
 
-@RequestMapping(value = [DATA_SERVER], produces = [PRODUCES_MEDIA_TYPE])
+@RequestMapping(value = [DATA_SERVER], produces = [MEDIA_JSON])
 interface DataServerApi {
 
     // TEST endpoints

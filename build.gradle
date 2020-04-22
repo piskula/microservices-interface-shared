@@ -22,9 +22,6 @@ kotlin {
         commonMain {
             dependencies {
                 implementation kotlin('stdlib-common')
-                implementation 'org.springframework:spring-web:5.1.2.RELEASE'
-                implementation 'org.springframework.cloud:spring-cloud-starter-feign:1.4.7.RELEASE'
-                implementation 'javax.validation:validation-api:2.0.0.Final'
             }
         }
         commonTest {
@@ -36,6 +33,11 @@ kotlin {
         jvmMain {
             dependencies {
                 implementation kotlin('stdlib-jdk8')
+                implementation 'org.springframework:spring-web:5.1.2.RELEASE'
+                implementation 'org.springframework.cloud:spring-cloud-starter-feign:1.4.7.RELEASE'
+                implementation 'javax.validation:validation-api:2.0.0.Final'
+                implementation 'javax.servlet:javax.servlet-api:3.0.1'
+                implementation 'org.springframework:spring-webmvc:5.2.5.RELEASE'
             }
         }
         jvmTest {
