@@ -19,24 +19,13 @@ kotlin {
     // For Windows, should be changed to e.g. mingwX64
     macosX64("macos")
     sourceSets {
-        commonMain {
-            dependencies {
-                implementation kotlin('stdlib-common')
-            }
-        }
-        commonTest {
-            dependencies {
-                implementation kotlin('test-common')
-                implementation kotlin('test-annotations-common')
-            }
-        }
         jvmMain {
             dependencies {
                 implementation kotlin('stdlib-jdk8')
-                implementation 'org.springframework:spring-web:5.1.2.RELEASE'
-                implementation 'org.springframework.cloud:spring-cloud-starter-feign:1.4.7.RELEASE'
-                implementation 'javax.validation:validation-api:2.0.0.Final'
                 implementation 'javax.servlet:javax.servlet-api:3.0.1'
+                implementation 'javax.validation:validation-api:2.0.0.Final'
+                implementation 'org.springframework.cloud:spring-cloud-starter-feign:1.4.7.RELEASE'
+                implementation 'org.springframework:spring-web:5.1.2.RELEASE'
                 implementation 'org.springframework:spring-webmvc:5.2.5.RELEASE'
             }
         }
@@ -46,20 +35,5 @@ kotlin {
                 implementation kotlin('test-junit')
             }
         }
-        jsMain {
-            dependencies {
-                implementation kotlin('stdlib-js')
-            }
-        }
-        jsTest {
-            dependencies {
-                implementation kotlin('test-js')
-            }
-        }
-        macosMain {
-        }
-        macosTest {
-        }
     }
 }
-
